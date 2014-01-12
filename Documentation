@@ -1,0 +1,56 @@
+  
+            ********************************
+            *Copyright 2013, Nikos Zempilis*
+            ********************************
+
+***********************************************************************
+* This file is part of Sundata, Arduino Library.                      *
+ 
+* Sundata is free software: you can redistribute it and/or modify     *
+* it under the terms of the GNU General Public License as published by*
+* the Free Software Foundation, either version 3 of the License, or   *
+* (at your option) any later version.                                 *
+*                                                                     *
+* Sundata is distributed in the hope that it will be useful,          *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the       *
+* GNU General Public License for more details.                        *
+*                                                                     *   
+* You should have received a copy of the GNU General Public License   *
+* along with Sundata.  If not, see <http://www.gnu.org/licenses/>.    *
+***********************************************************************
+
+This is a library for calculating the basic attributes needed for solar position, sun azimuth, 
+sun elevation, sunrise and sunset time. It was created to be used in solar panel trackers. The 
+equations were all found at http://pveducation.org/ and tested with various online solar position
+calculators. 
+
+Author: Nikos Zempilis 
+Email: nzebilis@yahoo.com
+
+gr.linkedin.com/pub/nikos-zempilis/75/844/a90/
+
+
+Functions:
+
+name.sundata(lattitude,longtitude,time zone) Creates an object with lattitude and longtitude, declared in degrees, and time difference from Greenwhich.
+
+name.time(year,month,day,hour,minute,second)Insert the time variables for the equations.
+
+name.calculations() Perform the calculations for the last given time variables. This function is required in order to get any results.
+
+name.elevation_rad() Returns sun's elevation in rads.
+
+name.elevation_deg() Returns sun's elevation in degrees.
+
+name.azimuth_rad() Returns sun's azimuth in rads.
+
+name.azimuth_deg() Returns sun's azimuth in degrees.
+
+name.sunrise_time() Returns sunrise time in decimal form.
+
+name.sunset_time() Returns sunset time in decimal form.
+
+
+
+
