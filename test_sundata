@@ -1,0 +1,35 @@
+#include <sundata.h>
+
+sundata test=sundata(35.5,25.2,2);                           //creat test object with latitude and longtitude declared in degrees and time difference from Greenwhich
+
+void setup()
+{
+Serial.begin(9600);  
+}
+
+void loop()
+{
+   test.time(2013, 4,1 , 8, 30,0);                          //insert year, month, day, hour, minutes and seconds
+   test.calculations();                                     //update calculations for last inserted time
+   
+  float el_rad=test.elevation_rad();                        //store sun's elevation in rads
+  float el_deg=test.elevation_deg();                        //store sun's elevation in degrees
+  
+  float az_rad=test.azimuth_rad();                          //store sun's azimuth in rads
+  float az_deg=test.azimuth_deg();                          //store sun's azimuth in degrees
+  
+  float sunrise=test.sunrise_time();                        //store sunrise time in decimal form
+  float sunset=test.sunset_time();                          //store sunset time in decimal form
+
+      Serial.print("/elevation in degrees=");
+        Serial.println(el_deg);
+
+              Serial.print("/azimouth in degrees=");
+                Serial.println(az_deg);
+                  Serial.println("/time of sunrise in decimal form=");
+                    Serial.print(sunrise);
+                      Serial.print("/time of sunset in decimal form=");
+                        Serial.print(sunset);
+                        Serial.println("}");
+  
+}
