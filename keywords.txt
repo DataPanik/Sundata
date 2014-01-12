@@ -1,0 +1,9 @@
+sundata	KEYWORD1
+time	KEYWORD2
+calculations	KEYWORD2
+elevation_rad	KEYWORD2
+elevation_deg	KEYWORD2
+azimuth_rad	KEYWORD2
+azimuth_deg	KEYWORD2
+sunrise_time	KEYWORD2
+sunset_time	KEYWORD2
