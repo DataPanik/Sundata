@@ -35,7 +35,7 @@ Functions:
 
 name.sundata(lattitude,longtitude,time zone) Creates an object with lattitude and longtitude, declared in degrees, and time difference from Greenwhich.
 
-name.time(year,month,day,hour,minute,second)Insert the time variables for the equations.
+name.time(year,month,day,hour,minute,second)Insert the time variables for the equations. In order to keep the functions simple and worldwide appliable time is given without daylight saving calculation.
 
 name.calculations() Perform the calculations for the last given time variables. This function is required in order to get any results.
 
